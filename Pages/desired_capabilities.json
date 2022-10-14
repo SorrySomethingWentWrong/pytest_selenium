@@ -1,0 +1,22 @@
+{
+    "acceptInsecureCerts": False,
+    "browserName": "chrome",
+    "goog:chromeOptions": {
+        "debuggerAddress": "localhost:19300"
+    },
+    "networkConnectionEnabled": False,
+    "pageLoadStrategy": "normal",
+    "platformName": "ANY",
+    "proxy": {},
+    "setWindowRect": True,
+    "strictFileInteractability": False,
+    "timeouts": {
+        "implicit": 300,
+        "pageLoad": 5000,
+        "script": 3000
+    },
+    "unhandledPromptBehavior": "dismiss and notify",
+    "webauthn:extension:credBlob": True,
+    "webauthn:extension:largeBlob": True,
+    "webauthn:virtualAuthenticators": True
+}
