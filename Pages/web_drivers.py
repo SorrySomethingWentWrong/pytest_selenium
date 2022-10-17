@@ -8,13 +8,11 @@ from extract_dict import json_dict
 
 @pytest.fixture(scope='session')
 class web_driver(webbrowser.Chrome):
-    def __init__(self, capabilities: dict.__dict__.__class__) -> None:  # type: ignore
+    def __init__(self, capabilities: dict.__dict__.__class__) -> None:
         self.desired_capabilities = capabilities
-        for key in enumerate(webdriver.DesiredCapabilities.CHROME.items()):
-            self.desired_capabilities.setdefault(key.__getitem__(1)[0], key.__getitem__(1)[1])  # type: ignore
+        for key in webdriver.DesiredCapabilities.CHROME.items().__iter__():
+            self.desired_capabilities.setdefault(key[0], key[1])
         self = _drivers_autoselect(self.desired_capabilities)
-        yield self
-        self.quit()  # type: ignore
 
 class _drivers_autoselect:
     '''
